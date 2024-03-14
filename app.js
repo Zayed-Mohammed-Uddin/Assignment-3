@@ -5,7 +5,13 @@ const btns = document.getElementsByClassName("btn");
 let currentValue = "";
 
 const evaluateExpression = function () {
-    const convertedValue = currentValue.replace("%", "*0.01");
+    const convertedValue = currentValue
+        .replace("%", "*0.01")
+        .replace("sin", "Math.sin")
+        .replace("cos", "Math.cos")
+        .replace("tan", `Math.tan`)
+        .replace("log", "Math.log")
+        .replace("π", "Math.PI");
     const result = eval(convertedValue);
     currentValue = "";
     currentValue += result;
