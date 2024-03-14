@@ -1,23 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-    alert("Calculator Loaded");
-});
-
+"use strict";
 const display = document.getElementById("displayBox");
 const btns = document.getElementsByClassName("btn");
 
-let btn_value = "";
+let currentValue = "";
+
+const evaluateExpression = function(){
+    const result = eval(currentValue);
+    display.value = result.toString();
+}
 
 for (let i = 0; i < btns.length; i++) {
-    const btn = btns[i];
-    btn.addEventListener("click", function () {
+    const button = btns[i];
+    button.addEventListener("click", function () {
+        const val = button.innerText;
 
-        if(btn_value == "AC"){
-            btn_value = "";
-            display.value = btn_value;
+        if (val == "AC") {
+            currentValue = "";
+            display.value = currentValue;
+        } else if (val == "=") {
+            evaluateExpression();
+        } else {
+            currentValue += val;
+            console.log(currentValue);
+            display.value = currentValue;
         }
-        else if(btn_value == ""){}
-        btn_value += btn.innerText;
-        display.value = btn_value;
-
     });
 }
