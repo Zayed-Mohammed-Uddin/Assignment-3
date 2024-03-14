@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-fluid d-flex min-vh-100 align-items-center justify-content-center calculatorApp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header mx-auto mt-sm-5">
+                        <h1 class="text-center">
+                            Calculator <span class="text-danger">App</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="calculator border rounded-2 p-5 mx-auto mt-4">
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <input readonly class="form-control-lg w-100 text-end" type="number" name="number"
+                                    id="displayBox">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100"
+                                        id="left_parenthesis">(</button>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100"
+                                        id="right_parenthesis">)</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="percent">%</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-danger btn-lg btn-block w-100" id="clear">AC</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="seven">7</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="eight">8</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="nine">9</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-outline-primary btn-lg btn-block w-100"
+                                        id="divide">/</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="four">4</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="five">5</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="six">6</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-outline-primary btn-lg btn-block w-100"
+                                        id="multiply">*</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="one">1</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="two">2</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="three">3</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-outline-primary btn-lg btn-block w-100"
+                                        id="subtract">-</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="zero">0</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-light btn-lg btn-block w-100" id="dot">.</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-success btn-lg btn-block w-100" id="equal">=</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 col-xl-3">
+                                <div class="calculator-btn">
+                                    <button class="btn btn-outline-primary btn-lg btn-block w-100" id="add">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./app.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

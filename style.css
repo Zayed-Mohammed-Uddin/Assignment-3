@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+:root {
+    --primary-font-family: "Madimi One", sans-serif;
+}
+
+body {
+    font-family: var(--primary-font-family);
+}
+
+.header {
+    border-bottom: 4px dashed #232333;
+}
+
+.calculator,
+.header {
+    width: 35%;
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+
+    .calculator,
+    .header {
+        width: 100% !important;
+    }
+
+    .btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.btn{
+    text-align: center;
+}
