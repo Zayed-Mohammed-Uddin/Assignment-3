@@ -4,8 +4,11 @@ const btns = document.getElementsByClassName("btn");
 
 let currentValue = "";
 
-const evaluateExpression = function(){
-    const result = eval(currentValue);
+const evaluateExpression = function () {
+    const convertedValue = currentValue.replace("%", "*0.01");
+    const result = eval(convertedValue);
+    currentValue = "";
+    currentValue += result;
     display.value = result.toString();
 }
 
